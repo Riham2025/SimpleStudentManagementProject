@@ -11,10 +11,13 @@ namespace SimpleStudentManagementProject
         static DateTime[] dateTimes = new DateTime[10];
         static int count = 0;
         static void Main(string[] args)
+
         {
+            try
             {
                 while (true) // we use while loop to repeat the process and we set true so it will not stop ... 
                 {
+
                     Console.Clear();
                     Console.WriteLine("System Menu \n");
                     Console.WriteLine("Select option: ");
@@ -43,12 +46,16 @@ namespace SimpleStudentManagementProject
                     }
                     Console.ReadLine();// we add this line just to stop the program from clear 'Console.Clear();' the screen before the user see the result ...
 
+
                 }
             }
 
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
 
-
-
+        }
 
 
             //1.Add a new student record(Name, Age, Marks)
